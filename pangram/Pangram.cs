@@ -4,6 +4,11 @@ public static class Pangram
 {
     public static bool IsPangram(string input)
     {
-        throw new NotImplementedException();
+        string alphabet ="abcdefghijklmnopqrstuvwxyz";
+
+        for(int i = 0; i< input.Length; i++)
+        {
+            if(int a
+        }
     }
 }
