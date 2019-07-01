@@ -8,7 +8,7 @@ public static class Pangram
 
         for(int i = 0; i< input.Length; i++)
         {
-            if(int a
+            for()
         }
     }
 }
