@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\RobotName.deps.json
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\RobotName.runtimeconfig.json
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\RobotName.runtimeconfig.dev.json
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\RobotName.dll
+C:\works\exercism\csharp\robot-name\bin\Debug\netcoreapp2.1\RobotName.pdb
+C:\works\exercism\csharp\robot-name\obj\Debug\netcoreapp2.1\RobotName.csprojAssemblyReference.cache
+C:\works\exercism\csharp\robot-name\obj\Debug\netcoreapp2.1\RobotName.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\robot-name\obj\Debug\netcoreapp2.1\RobotName.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\robot-name\obj\Debug\netcoreapp2.1\RobotName.AssemblyInfo.cs
+C:\works\exercism\csharp\robot-name\obj\Debug\netcoreapp2.1\RobotName.dll
+C:\works\exercism\csharp\robot-name\obj\Debug\netcoreapp2.1\RobotName.pdb

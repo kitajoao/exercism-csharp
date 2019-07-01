@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\Series.deps.json
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\Series.runtimeconfig.json
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\Series.runtimeconfig.dev.json
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\Series.dll
+C:\works\exercism\csharp\series\bin\Debug\netcoreapp2.1\Series.pdb
+C:\works\exercism\csharp\series\obj\Debug\netcoreapp2.1\Series.csprojAssemblyReference.cache
+C:\works\exercism\csharp\series\obj\Debug\netcoreapp2.1\Series.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\series\obj\Debug\netcoreapp2.1\Series.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\series\obj\Debug\netcoreapp2.1\Series.AssemblyInfo.cs
+C:\works\exercism\csharp\series\obj\Debug\netcoreapp2.1\Series.dll
+C:\works\exercism\csharp\series\obj\Debug\netcoreapp2.1\Series.pdb

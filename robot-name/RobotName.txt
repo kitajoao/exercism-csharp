@@ -1,0 +1,42 @@
+using System;
+using System.Text;
+
+public class Robot
+{
+    static void Main(string[] args)
+    {
+    Random random = new Random();
+    int numbpassw = random.Next(100, 999);
+
+        
+    string[] poslet = new string[23]{"A","B","C","D","E","F","G","H","J","K","L","M","N","P","R","S","T","U","V","W","X","Y","Z"};
+	
+    string stepletpassw = new string(char);
+
+    StringBuilder letpassw = new StringBuilder();
+	
+    for (int i = 0; i < 2; i++)
+    {
+        letpassw.Append(poslet[stepletpassw(22)]);
+    } 
+    
+	return letpassw.ToString();
+}
+
+
+    }
+
+    public string Name
+    {
+        
+        get
+        {
+            
+        }
+    }
+
+    public void Reset()
+    {
+        throw new NotImplementedException("You need to implement this function.");
+    }
+}

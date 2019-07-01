@@ -1,0 +1,43 @@
+using System;
+
+public static class Hamming
+{
+    public static int Distance(string firstStrand, string secondStrand)
+    {
+        int count= 0;
+        int length1st = firstStrand.Length;
+        int length2nd = secondStrand.Length;
+
+        if(length1st == 0  && length2nd == 0)
+        {
+            return 0;
+        }
+        if(firstStrand == secondStrand)
+        {
+            return 0;
+        }
+        if(length1st != length2nd)
+        {
+            throw new ArgumentException();
+        }
+
+        for(var i = 0; i<length2nd; i++)
+        {
+            var firstStrandchar = firstStrand[i];
+            var secondStrandchar = secondStrand[i];
+
+            if(firstStrandchar != secondStrandchar)
+            {
+                count++;
+            }
+        }  
+
+
+    return count;            
+            
+
+    }
+       
+         
+
+}
