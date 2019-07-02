@@ -68,7 +68,7 @@ public class PangramTest : IDisposable
     [Fact]
     public void Pangram_with_mixed_case_and_punctuation()
     {
-        Assert.True(Pangram.IsPangram("Five quacking Zephyrs jolt my wax bed."));
+        Assert.True(Pangram.IsPangram("\"Five quacking Zephyrs jolt my wax bed.\""));
     }
 
     [Fact]
