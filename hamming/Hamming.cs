@@ -24,11 +24,7 @@ public static class Hamming
                 count++;
             }
         }  
-        Debug.Write("oiaishskf");
-        Console.Write("oiaishskf");
-        Debug.WriteLine("oiaishskf");
-        Console.WriteLine("oasf");
-        Logger
+    
             return count;            
     }
 }

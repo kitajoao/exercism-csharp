@@ -43,7 +43,7 @@ public class AllergiesTest
     public void No_allergies_at_all()
     {
         var sut = new Allergies(0);
-        Assert.Empty(sut.List());
+        Assert.Empty(sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -51,7 +51,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(1);
         var expected = new[] { Allergen.Eggs };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -59,7 +59,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(2);
         var expected = new[] { Allergen.Peanuts };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -67,7 +67,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(8);
         var expected = new[] { Allergen.Strawberries };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -75,7 +75,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(3);
         var expected = new[] { Allergen.Eggs, Allergen.Peanuts };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -83,7 +83,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(5);
         var expected = new[] { Allergen.Eggs, Allergen.Shellfish };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -91,7 +91,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(248);
         var expected = new[] { Allergen.Strawberries, Allergen.Tomatoes, Allergen.Chocolate, Allergen.Pollen, Allergen.Cats };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -99,7 +99,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(255);
         var expected = new[] { Allergen.Eggs, Allergen.Peanuts, Allergen.Shellfish, Allergen.Strawberries, Allergen.Tomatoes, Allergen.Chocolate, Allergen.Pollen, Allergen.Cats };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 
     [Fact(Skip = "Remove to run test")]
@@ -107,7 +107,7 @@ public class AllergiesTest
     {
         var sut = new Allergies(509);
         var expected = new[] { Allergen.Eggs, Allergen.Shellfish, Allergen.Strawberries, Allergen.Tomatoes, Allergen.Chocolate, Allergen.Pollen, Allergen.Cats };
-        Assert.Equal(expected, sut.List());
+        Assert.Equal(expected, sut.List);
     }
 }
 

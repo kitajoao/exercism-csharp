@@ -32,7 +32,10 @@ public class Allergies
     {
         if (scoallergy == 0)
         {
-            return new Allergen[]{};
+            return  new Allergen[]{};
         }
+        
+        return null;
+
     }
 }
