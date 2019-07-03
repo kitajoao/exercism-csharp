@@ -46,7 +46,7 @@ public class RaindropsTest : IDisposable
         Assert.Equal("Pling", Raindrops.Convert(6));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Number_2_to_the_power_3_does_not_make_a_raindrop_sound_as_3_is_the_exponent_not_the_base()
     {
         Assert.Equal("8", Raindrops.Convert(8));
@@ -106,7 +106,7 @@ public class RaindropsTest : IDisposable
         Assert.Equal("Plong", Raindrops.Convert(49));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void The_sound_for_52_is_52()
     {
         Assert.Equal("52", Raindrops.Convert(52));
