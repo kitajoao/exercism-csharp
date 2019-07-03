@@ -88,7 +88,7 @@ public class PhoneNumberTest : IDisposable
         Assert.Throws<ArgumentException>(() => PhoneNumber.Clean(phrase));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Invalid_if_area_code_starts_with_0()
     {
         var phrase = "(023) 456-7890";

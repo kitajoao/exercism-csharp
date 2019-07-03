@@ -14,20 +14,19 @@ public class PhoneNumber
             {
                 cleanedNumb += phoneNumber[i];
             }
-        }   
-        if(cleanedNumb[0] == 1 || cleanedNumb[0] == 0)
-        {
-            throw new ArgumentException();
         }
-        if(cleanedNumb.Length != 10)
-        {
-            throw new ArgumentException();
-        }
+        Console.WriteLine("The size of the string is: {0}", cleanedNumb.Length);
+        Console.WriteLine("The position 0 in the array is: {0}", cleanedNumb[0]);
+        Console.WriteLine("The array is: {0}", cleanedNumb);
+
         if(cleanedNumb.Length == 10)
         {
+            if(cleanedNumb[0] != 0 || cleanedNumb[3] != 0)
+            {
             return cleanedNumb;
+            }
         }
     
-        return null;
+        throw new ArgumentException();        
     }
 }
