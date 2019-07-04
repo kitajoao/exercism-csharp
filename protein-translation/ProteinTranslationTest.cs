@@ -1,9 +1,20 @@
 // This file was auto-generated based on version 1.1.1 of the canonical data.
-
+using System;
 using Xunit;
+using Xunit.Abstractions;
 
-public class ProteinTranslationTest
+public class ProteinTranslationTest : IDisposable
 {
+    public ProteinTranslationTest(ITestOutputHelper testOutput)
+    {
+        XunitLogging.Register(testOutput);
+    }
+
+    public void Dispose()
+    {
+        XunitLogging.Flush();
+    }
+    
     [Fact]
     public void Methionine_rna_sequence()
     {
