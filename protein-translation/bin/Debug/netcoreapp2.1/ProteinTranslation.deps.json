@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "f3dec75f45facb9ffcf5cf4cf53af609e6c14a77"
+    "signature": "b57338ea45d2f49887928099f78415ab144c68e0"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
       "ProteinTranslation/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.2.0",
+          "XunitLogger": "2.1.0",
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.1"
         },
@@ -16,6 +17,7 @@
           "ProteinTranslation.dll": {}
         }
       },
+      "Fody/5.0.1": {},
       "Microsoft.CodeCoverage/16.2.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -331,6 +333,17 @@
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
+          }
+        }
+      },
+      "ModuleInit.Fody/2.0.0": {
+        "dependencies": {
+          "Fody": "5.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.0/ModuleInit.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
           }
         }
       },
@@ -1017,6 +1030,18 @@
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "16.2.0"
         }
+      },
+      "XunitLogger/2.1.0": {
+        "dependencies": {
+          "ModuleInit.Fody": "2.0.0",
+          "xunit.abstractions": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/XunitLogger.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
       }
     }
   },
@@ -1025,6 +1050,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Fody/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SdnySW0Bdxs9BrSuivMhZt7Xgn6kGsC+WGbz1bRjMO6z65h6Q5rSFg4AVwIRg0jjbNJ3hX7jfQ2eZjpkenxf6Q==",
+      "path": "fody/5.0.1",
+      "hashPath": "fody.5.0.1.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.2.0": {
       "type": "package",
@@ -1074,6 +1106,13 @@
       "sha512": "sha512-q+eLtROUAQ3OxYA5mpQrgyFgzLQxIyrfT2eLpYX5IEPlHmIio2nh4F5bgOaQoGOV865kFKZZso9Oq9RlazvXtg==",
       "path": "microsoft.win32.registry/4.0.0",
       "hashPath": "microsoft.win32.registry.4.0.0.nupkg.sha512"
+    },
+    "ModuleInit.Fody/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pOeg12g5o3Ai2/ADqY18V2hZVE0rgYP76sBFSvLJ2MtATLxb4Sd4WDx6gf1S1lfLCOV020MRIl4xCFK14//FPA==",
+      "path": "moduleinit.fody/2.0.0",
+      "hashPath": "moduleinit.fody.2.0.0.nupkg.sha512"
     },
     "Newtonsoft.Json/9.0.1": {
       "type": "package",
@@ -1536,6 +1575,13 @@
       "sha512": "sha512-mBXd1lp1TQr4to2nFv+c4Tf+RnPoQPKglzwLdbdirOUxRaJsCUNDUx2y7E6j9ajgISlTTp1CydFBZCRCUIrwDg==",
       "path": "xunit.runner.visualstudio/2.4.1",
       "hashPath": "xunit.runner.visualstudio.2.4.1.nupkg.sha512"
+    },
+    "XunitLogger/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3JA+x8XSSdED1rUe25J41GyCMitH2OGECMt7UFkRXeGj4q0AuGsFz1Y7EBH92hT2d/HIyQ8QsOxXhQn52zjc8Q==",
+      "path": "xunitlogger/2.1.0",
+      "hashPath": "xunitlogger.2.1.0.nupkg.sha512"
     }
   }
 }
