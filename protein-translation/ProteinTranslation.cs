@@ -6,7 +6,7 @@ public static class ProteinTranslation
     {
         string[] condonstypes = { "AUG", "UUU", "UUC", "UUA", "UUG", "UCU", "UCC", "UCA", "UCG", "UAU", "UAC", "UGU", "UGC", "UGG", "UAA", "UAG", "UGA" };
 
-        string[] proteinstypes = { "Methionine", "Phenylanine", "Phenylanine", "Leucine", "Leucine", "Serine", "Serine", "Serine", "Serine", "Tyrosine", "Tyrosine", "Cystenine", "Cystenine", "Tryptophan", "STOP", "STOP", "STOP" };
+        string[] proteinstypes = { "Methionine", "Phenylalanine", "Phenylalanine", "Leucine", "Leucine", "Serine", "Serine", "Serine", "Serine", "Tyrosine", "Tyrosine", "Cysteine", "Cysteine", "Tryptophan", "STOP", "STOP", "STOP" };
 
         int countcondon = 0;
 
@@ -22,37 +22,55 @@ public static class ProteinTranslation
 
         string[] condonstrands = new string[countcondon];
 
-        int [] poscondon = new int[countcondon];
-        
-        string[] proteinanswer = new string[countcondon];
-        
+        int[] poscondon = new int[countcondon];
+
+
         Console.WriteLine("Length condonstrands: {0}", condonstrands.Length);
 
         for (int i = 0; i < countcondon; i++)
         {
-
             condonstrands[i] = strand.Substring((i * 3), 3);
-
-            
         }
 
         for (int j = 0; j < condonstrands.Length; j++)
         {
-            for(int k = 0; k < condonstypes.Length; k++)
+            for (int k = 0; k < condonstypes.Length; k++)
             {
-                if(condonstrands[j] == condonstypes[k])
+                if (condonstrands[j] == condonstypes[k])
                 {
                     poscondon[j] = k;
                 }
             }
         }
 
+        var pos = 0;
+
         for (int i = 0; i < poscondon.Length; i++)
         {
-            proteinanswer[i] = proteinstypes[poscondon[i]];
-
-            Console.WriteLine(proteinanswer[i]);
+            if (proteinstypes[poscondon[i]] != "STOP")
+            {
+                pos++;
+            }
+            else
+                break;
         }
-        return condonstrands;
+
+
+        Console.WriteLine("pos é igual a : {0}", pos);
+        if(pos == 0)
+         {
+            return Array.Empty<string>();
+        }
+        
+        string[] proteinanswer = new string[pos];
+
+        for(int i = 0; i < pos; i++)
+        {
+            proteinanswer[i] = proteinstypes[poscondon[i]];
+        }
+
+        return proteinanswer;
+
+        //return null;
     }
 }
