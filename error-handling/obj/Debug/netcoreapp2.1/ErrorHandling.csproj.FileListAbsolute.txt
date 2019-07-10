@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\error-handling\obj\Debug\netcoreapp2.1\ErrorHandling.csprojAssemblyReference.cache
+C:\works\exercism\csharp\error-handling\obj\Debug\netcoreapp2.1\ErrorHandling.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\error-handling\obj\Debug\netcoreapp2.1\ErrorHandling.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\error-handling\obj\Debug\netcoreapp2.1\ErrorHandling.AssemblyInfo.cs
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\ErrorHandling.deps.json
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\ErrorHandling.runtimeconfig.json
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\ErrorHandling.runtimeconfig.dev.json
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\ErrorHandling.dll
+C:\works\exercism\csharp\error-handling\bin\Debug\netcoreapp2.1\ErrorHandling.pdb
+C:\works\exercism\csharp\error-handling\obj\Debug\netcoreapp2.1\ErrorHandling.dll
+C:\works\exercism\csharp\error-handling\obj\Debug\netcoreapp2.1\ErrorHandling.pdb

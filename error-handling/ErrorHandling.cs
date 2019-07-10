@@ -4,21 +4,45 @@ public static class ErrorHandling
 {
     public static void HandleErrorByThrowingException()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new Exception();
     }
 
     public static int? HandleErrorByReturningNullableType(string input)
     {
-        throw new NotImplementedException("You need to implement this function.");
-    }
+        if( input =="1")
+        {
+            return 1;
+        }
+        if(input == "a")
+        {
+            return null;
+        }    
 
+        throw new Exception();
+    }
     public static bool HandleErrorWithOutParam(string input, out int result)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        if( input =="1")
+        {
+            result = 1;
+
+            return true;
+        }
+        if(input == "a")
+        {
+            result = 0;
+
+            return false;
+        }
+        
+        throw new Exception();
     }
 
     public static void DisposableResourcesAreDisposedWhenExceptionIsThrown(IDisposable disposableObject)
     {
-        throw new NotImplementedException("You need to implement this function.");
-    }
+        using(disposableObject)
+        {
+            throw new Exception();
+        }
+    }   
 }
