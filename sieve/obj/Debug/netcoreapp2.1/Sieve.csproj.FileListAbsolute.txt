@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\Sieve.deps.json
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\Sieve.runtimeconfig.json
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\Sieve.runtimeconfig.dev.json
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\Sieve.dll
+C:\works\exercism\csharp\sieve\bin\Debug\netcoreapp2.1\Sieve.pdb
+C:\works\exercism\csharp\sieve\obj\Debug\netcoreapp2.1\Sieve.csprojAssemblyReference.cache
+C:\works\exercism\csharp\sieve\obj\Debug\netcoreapp2.1\Sieve.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\sieve\obj\Debug\netcoreapp2.1\Sieve.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\sieve\obj\Debug\netcoreapp2.1\Sieve.AssemblyInfo.cs
+C:\works\exercism\csharp\sieve\obj\Debug\netcoreapp2.1\Sieve.dll
+C:\works\exercism\csharp\sieve\obj\Debug\netcoreapp2.1\Sieve.pdb
