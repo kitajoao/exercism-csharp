@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\RobotSimulator.deps.json
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\RobotSimulator.runtimeconfig.json
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\RobotSimulator.runtimeconfig.dev.json
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\RobotSimulator.dll
+C:\works\exercism\csharp\robot-simulator\bin\Debug\netcoreapp2.1\RobotSimulator.pdb
+C:\works\exercism\csharp\robot-simulator\obj\Debug\netcoreapp2.1\RobotSimulator.csprojAssemblyReference.cache
+C:\works\exercism\csharp\robot-simulator\obj\Debug\netcoreapp2.1\RobotSimulator.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\robot-simulator\obj\Debug\netcoreapp2.1\RobotSimulator.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\robot-simulator\obj\Debug\netcoreapp2.1\RobotSimulator.AssemblyInfo.cs
+C:\works\exercism\csharp\robot-simulator\obj\Debug\netcoreapp2.1\RobotSimulator.dll
+C:\works\exercism\csharp\robot-simulator\obj\Debug\netcoreapp2.1\RobotSimulator.pdb
