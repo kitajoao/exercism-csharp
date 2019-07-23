@@ -1,5 +1,7 @@
 using System;
-
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 public static class Sieve
 {
@@ -10,44 +12,65 @@ public static class Sieve
             throw new ArgumentOutOfRangeException();
         }
 
-        int[] numbersUpToLimit = new int[limit - 1];
+        var numbersUpToLimit = new HashSet<int>();
+        var primes = new HashSet<int>(limit);
 
-        bool[] isPrime = new bool[limit - 1];
-
-        int[] primeNumbers = new int[isPrime.Length];
-
-        if (limit >= 2)
+        for (var l = 2; l <= limit; l++)
         {
-            for (int i = 0; i < limit - 1; i++)
+            if (numbersUpToLimit.Contains(l) == false
+                && primes.Contains(l) == false)
             {
-                numbersUpToLimit[i] = i + 2;
-
-                isPrime[i] = true;
+                primes.Add(l);
             }
 
-            Console.WriteLine("Numbers up to limit are: {0}", numbersUpToLimit);
-
-            for (int i = 2; i <= numbersUpToLimit.Length / 2; i++)
+            var c = l;
+            do
             {
-                if (isPrime[i])
-                {
-                    for (int j = i * 2; j <= numbersUpToLimit.Length / 2; j += i)
-                        isPrime[j] = false;
-                }
-            }
-
-            for (int i = 0; i < isPrime.Length; i++)
-            {
-                if (isPrime[i] == true)
-                {
-                    primeNumbers[i] = numbersUpToLimit[i];
-                }
-            }
-
-            return primeNumbers;
+                numbersUpToLimit.Add(c);
+                c = c + l;
+            } while(c <= limit);
         }
 
-        return null;
+        return primes.ToArray();
+
+        // int[] numbersUpToLimit = new int[limit - 1];
+
+        // bool[] isPrime = new bool[limit - 1];
+
+        // int[] primeNumbers = new int[isPrime.Length];
+
+        // if (limit >= 2)
+        // {
+        //     for (int i = 0; i < limit - 1; i++)
+        //     {
+        //         numbersUpToLimit[i] = i + 2;
+
+        //         isPrime[i] = true;
+        //     }
+
+        //     Console.WriteLine("Numbers up to limit are: {0}", numbersUpToLimit);
+
+        //     for (int i = 2; i <= numbersUpToLimit.Length / 2; i++)
+        //     {
+        //         if (isPrime[i])
+        //         {
+        //             for (int j = i * 2; j <= numbersUpToLimit.Length / 2; j += i)
+        //                 isPrime[j] = false;
+        //         }
+        //     }
+
+        //     for (int i = 0; i < isPrime.Length; i++)
+        //     {
+        //         if (isPrime[i] == true)
+        //         {
+        //             primeNumbers[i] = numbersUpToLimit[i];
+        //         }
+        //     }
+
+        //     return primeNumbers;
+        // }
+
+        // return null;
     }
 
 }
