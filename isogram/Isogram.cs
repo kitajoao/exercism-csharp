@@ -9,22 +9,37 @@ public static class Isogram
             return true;
         }
 
-        word[1].
-        int count = 0;
-        for (int i = 0; i < word.Length; i++)
+        string alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+        string concatStg = "";
+
+        word = word.ToLower();
+
+        for (int m = 0; m < word.Length; m++)
         {
-            for (int j = 0; j < word.Length; j++)
+            if (alphabet.IndexOf(word[m]) != -1)
             {
-                if (word[i] == word[j])
+                concatStg += word[m];
+            }
+        }
+
+        Console.WriteLine("string concatenada eh igual a: {0}", concatStg);
+
+
+        int p = -1, i, j;
+        for (i = 0; i < concatStg.Length; i++)
+        {
+            for (j = i + 1; j < concatStg.Length; j++)
+            {
+                if (concatStg[i] == concatStg[j])
                 {
-                    count++;
+                    p = i;
                 }
             }
         }
-        if (count > word.Length)
-        {
+        if (p != -1)
+            return false;
+        else
             return true;
-        }
-        return false;
     }
 }
