@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\Darts.deps.json
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\Darts.runtimeconfig.json
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\Darts.runtimeconfig.dev.json
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\Darts.dll
+C:\works\exercism\csharp\darts\bin\Debug\netcoreapp2.1\Darts.pdb
+C:\works\exercism\csharp\darts\obj\Debug\netcoreapp2.1\Darts.csprojAssemblyReference.cache
+C:\works\exercism\csharp\darts\obj\Debug\netcoreapp2.1\Darts.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\darts\obj\Debug\netcoreapp2.1\Darts.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\darts\obj\Debug\netcoreapp2.1\Darts.AssemblyInfo.cs
+C:\works\exercism\csharp\darts\obj\Debug\netcoreapp2.1\Darts.dll
+C:\works\exercism\csharp\darts\obj\Debug\netcoreapp2.1\Darts.pdb
