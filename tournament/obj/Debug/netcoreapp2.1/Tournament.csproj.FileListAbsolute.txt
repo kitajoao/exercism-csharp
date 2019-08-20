@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\tournament\obj\Debug\netcoreapp2.1\Tournament.csprojAssemblyReference.cache
+C:\works\exercism\csharp\tournament\obj\Debug\netcoreapp2.1\Tournament.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\tournament\obj\Debug\netcoreapp2.1\Tournament.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\tournament\obj\Debug\netcoreapp2.1\Tournament.AssemblyInfo.cs
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\Tournament.deps.json
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\Tournament.runtimeconfig.json
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\Tournament.runtimeconfig.dev.json
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\Tournament.dll
+C:\works\exercism\csharp\tournament\bin\Debug\netcoreapp2.1\Tournament.pdb
+C:\works\exercism\csharp\tournament\obj\Debug\netcoreapp2.1\Tournament.dll
+C:\works\exercism\csharp\tournament\obj\Debug\netcoreapp2.1\Tournament.pdb
