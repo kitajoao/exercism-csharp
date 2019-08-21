@@ -21,10 +21,11 @@ public class SpiralMatrix
             //Up Direction Move  
             for (int j = c2 - 1; j >= c1 + 1; j--)
                 SpiralMatrix[j, c1] = printValue++;
+
             c1++;
+
             c2--;
         }
-
         return SpiralMatrix;
     }
 }
