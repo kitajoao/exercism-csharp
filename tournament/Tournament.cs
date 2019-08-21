@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 public static class Tournament
 {
     public static void Tally(Stream inStream, Stream outStream)
@@ -14,11 +15,10 @@ public static class Tournament
 
         var matchesPlayed = new Dictionary<string, Tuple<int, int, int, int>>();
 
-        var table = "Team                           | MP |  W |  D |  L |  P";
 
         for (int i = 0; i < splittedStringsInNextLine.Length; i++)
         {
-            if(string.IsNullOrEmpty(splittedStringsInNextLine[i]))
+            if (string.IsNullOrEmpty(splittedStringsInNextLine[i]))
             {
                 break;
             }
@@ -60,24 +60,38 @@ public static class Tournament
                 matchesPlayed[iterator[1]] = new Tuple<int, int, int, int>(w.Item1 + 1, w.Item2, w.Item3, w.Item4 + 3);
             }
         }
-        
-                
 
-        var tableLine = "Teams_Names             |  matchp |  wi |  dr |  ls |  pt";
+        var itemsTwo = from pair in matchesPlayed
+                       orderby pair.Key ascending
+                       select pair;
+        var items = from pair in itemsTwo
+                    orderby pair.Value.Item4 descending
+                    select pair;
 
-        foreach(var it in matchesPlayed)
+
+        var table = "Team                           | MP |  W |  D |  L |  P";
+
+        var tableLine = "Teams_Names|  matchp |  wi |  dr |  ls |  pt";
+
+        var spaces = "                               ";
+
+        foreach (var it in items)
         {
+
+            var emptyString = "";
+            var stringSpac = emptyString.PadRight((spaces.Length - it.Key.Length), ' ');
             table += "\n" + tableLine.Replace("Teams_Names", it.Key)
+            .Insert(it.Key.Length, stringSpac)
             .Replace("matchp", (it.Value.Item1 + it.Value.Item2 + it.Value.Item3).ToString())
             .Replace("wi", it.Value.Item1.ToString())
             .Replace("dr", it.Value.Item2.ToString())
             .Replace("ls", it.Value.Item3.ToString())
             .Replace("pt", it.Value.Item4.ToString());
-        } 
+        }
         Console.WriteLine(table);
 
-         var bytes = Encoding.UTF8.GetBytes(table);
-           outStream.Write(bytes, 0, bytes.Length);
+        var bytes = Encoding.UTF8.GetBytes(table);
+        outStream.Write(bytes, 0, bytes.Length);
     }
 
 }
