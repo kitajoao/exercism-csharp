@@ -9,18 +9,12 @@ public static class Bob
 
         var statementClearOfSpecChars = "";
 
-        string questionMark = "?";
-
-        string emptyString = "";
-
         bool validator = false;
-
 
         if (string.IsNullOrWhiteSpace(statement))
         {
             return "Fine. Be that way!";
         }
-
         for (var i = 0; i < statement.Length; i++)
         {
             if (char.IsLetter(statement[i]))
@@ -28,9 +22,6 @@ public static class Bob
                 statementClearOfSpecChars += statement[i];
             }
         }
-        
-        Console.WriteLine(statementClearOfSpecChars);
-        
         for (var i = 0; i < statementClearOfSpecChars.Length; i++)
         {
             if (letters.ToUpper().IndexOf(statementClearOfSpecChars[i]) > -1)
@@ -44,7 +35,6 @@ public static class Bob
                 break;
             }
         }
-
         statement = statement.Trim();
 
         if (validator == true && statement.Last() == '?')
