@@ -77,7 +77,6 @@ public static class Tournament
 
         foreach (var it in items)
         {
-
             var emptyString = "";
             var stringSpac = emptyString.PadRight((spaces.Length - it.Key.Length), ' ');
             table += "\n" + tableLine.Replace("Teams_Names", it.Key)

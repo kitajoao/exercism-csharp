@@ -5822,7 +5822,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\staff\\.nuget\\packages\\": {},
+    "C:\\Users\\JoaoKita\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -5831,14 +5831,14 @@
       "projectUniqueName": "C:\\works\\exercism\\csharp\\binary-search\\BinarySearch.csproj",
       "projectName": "BinarySearch",
       "projectPath": "C:\\works\\exercism\\csharp\\binary-search\\BinarySearch.csproj",
-      "packagesPath": "C:\\Users\\staff\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\JoaoKita\\.nuget\\packages\\",
       "outputPath": "C:\\works\\exercism\\csharp\\binary-search\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\staff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JoaoKita\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5846,8 +5846,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nfe-pkg.pkgs.visualstudio.com/_packaging/all/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
@@ -5868,7 +5867,6 @@
             "version": "[16.2.0, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
