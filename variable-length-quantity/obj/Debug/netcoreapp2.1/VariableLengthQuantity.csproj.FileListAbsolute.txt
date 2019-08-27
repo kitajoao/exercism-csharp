@@ -1,0 +1,14 @@
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\VariableLengthQuantity.deps.json
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\VariableLengthQuantity.runtimeconfig.json
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\VariableLengthQuantity.runtimeconfig.dev.json
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\VariableLengthQuantity.dll
+C:\works\exercism\csharp\variable-length-quantity\bin\Debug\netcoreapp2.1\VariableLengthQuantity.pdb
+C:\works\exercism\csharp\variable-length-quantity\obj\Debug\netcoreapp2.1\VariableLengthQuantity.csprojAssemblyReference.cache
+C:\works\exercism\csharp\variable-length-quantity\obj\Debug\netcoreapp2.1\VariableLengthQuantity.csproj.CoreCompileInputs.cache
+C:\works\exercism\csharp\variable-length-quantity\obj\Debug\netcoreapp2.1\VariableLengthQuantity.AssemblyInfoInputs.cache
+C:\works\exercism\csharp\variable-length-quantity\obj\Debug\netcoreapp2.1\VariableLengthQuantity.AssemblyInfo.cs
+C:\works\exercism\csharp\variable-length-quantity\obj\Debug\netcoreapp2.1\VariableLengthQuantity.dll
+C:\works\exercism\csharp\variable-length-quantity\obj\Debug\netcoreapp2.1\VariableLengthQuantity.pdb
