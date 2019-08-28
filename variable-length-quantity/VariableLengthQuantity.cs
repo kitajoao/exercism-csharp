@@ -4,73 +4,61 @@ using System.Linq;
 
 public static class VariableLengthQuantity
 {
+    const uint b127 = 0x7Fu;
     public static uint[] Encode(uint[] numbers)
     {
+        var outint = new List<uint>();
 
-        uint curNumb, index, lower7bits;
-
-        bool end;
-
-        var outputList = new List<uint>();
-
-        var outputListRange = new List<uint>();
-
-
-        for (int i = 0; i < numbers.Length; i++)
+        foreach (var ai in numbers)
         {
-            curNumb = numbers[i];
+            var tmpint = new List<uint>();
+            uint b128 = 0x00;
+            uint a = ai;
 
-            end = false;
-
-            index = 1;
-
-            while (!end)
+            if (a == 0)
             {
-                lower7bits = curNumb & 127;
-                curNumb >>= 7;
-                Console.WriteLine(lower7bits);
-                if (curNumb == 0)
-                {
-                    end = true;
-                }
-                if (index != 1)
-                {
-                    lower7bits |= 128;
-                }
-                outputListRange.Add(lower7bits);
-                index++;
+                tmpint.Add(0);
             }
-            outputListRange.Reverse();
-
-            outputList.AddRange(outputListRange);
-
-            outputListRange.Clear();
+            else
+                while (a > 0)
+                {
+                    uint p = (a & b127) | b128;
+                    tmpint.Add(p);
+                    a = a >> 7;
+                    b128 = 0x80;// this is done to avoid an if when you have in the first block of VLQ a number == 1.
+                }
+            tmpint.Reverse();
+            outint.AddRange(tmpint);
         }
-        return outputList.ToArray();
-
+        return outint.ToArray();
     }
+
     public static uint[] Decode(uint[] bytes)
     {
-        var outputList = new List<uint>();
-        uint currentByte, value = 0;
-        for (int i = 0; i < bytes.Length; i++)
+
+        var outint = new List<uint>();
+        uint a = 0;
+        uint b128 = 0x80;
+        var index = 0;
+        var bytesLength = bytes.Length;
+
+        foreach (var ai in bytes)
         {
-            currentByte = bytes[i];
-            value <<= 7;
-            value |= currentByte & 127;
-            if ((currentByte & 128) == 0)
+            a <<= 7;
+            a |= ai & b127;
+
+            if ((ai & b128) == 0)
             {
-                outputList.Add(value);
-                value = 0;
+                outint.Add(a);
+                a = 0;
+                index++;
             }
-            else if (i == bytes.Length - 1 && (currentByte & 128) != 0)
+            else if ((index == bytesLength - 1) && (ai & b128) != 0)
             {
                 throw new InvalidOperationException();
             }
         }
-        return outputList.ToArray();
+        return outint.ToArray();
     }
 
 }
-
-
