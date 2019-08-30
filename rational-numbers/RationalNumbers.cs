@@ -5,15 +5,15 @@ public static class RealNumberExtension
 {
     public static double Expreal(this int realNumber, RationalNumber r)
     {
-        float power = ((float)r.num/(float)r.den);
-        
-        float result  = (float)Math.Pow(realNumber, power);
-        
-        if(result >=1)
+        float power = ((float)r.num / (float)r.den);
+
+        float result = (float)Math.Pow(realNumber, power);
+
+        if (result >= 1)
         {
             result = (int)result;
         }
-        
+
         return result;
     }
 }
@@ -102,17 +102,60 @@ public struct RationalNumber
 
     public RationalNumber Abs()
     {
-        return new RationalNumber(Math.Abs(num),Math.Abs(den));
+        return new RationalNumber(Math.Abs(num), Math.Abs(den));
     }
 
     public RationalNumber Reduce()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        int gcd = 0;
+
+        var signalnum = Math.Sign(num);
+
+        var signalden = Math.Sign(den);
+
+        den = Math.Abs(den);
+
+        num = Math.Abs(num);
+
+        if (num == 0)
+        {
+            gcd = den;
+        }
+        else if (num == den)
+        {
+            gcd = num;
+        }
+        else if ((den > num) && (den % num != 0))
+        {
+            gcd = den % num;
+        }
+        else if ((den > num) && den % num == 0)
+        {
+            gcd = num;
+        }
+        else if ((den < num) && (num % den != 0))
+        {
+            gcd = num % den;
+        }
+        else if ((den < num) && (num % den == 0))
+        {
+            gcd = den;
+        }
+
+        if (signalnum < 0)
+        {
+            num = num * signalnum;
+        }
+        else if (signalden < 0)
+        {
+            num = num * signalden;
+        }
+        return new RationalNumber((num / gcd), (den / gcd));
     }
 
     public RationalNumber Exprational(int power)
     {
-        return new RationalNumber((int)Math.Pow(num, power),(int)Math.Pow(den, power));     
+        return new RationalNumber((int)Math.Pow(num, power), (int)Math.Pow(den, power));
     }
 
     public double Expreal(int baseNumber)
