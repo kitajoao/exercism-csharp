@@ -29,7 +29,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Equal(expected, actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_that_empty_matrix_has_no_saddle_points()
     {
         var matrix = new int[,] { };
@@ -37,7 +37,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Empty(actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_lack_of_saddle_points_when_there_are_none()
     {
         var matrix = new[,]
@@ -50,7 +50,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Empty(actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_multiple_saddle_points_in_a_column()
     {
         var matrix = new[,]
@@ -64,7 +64,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Equal(expected, actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_multiple_saddle_points_in_a_row()
     {
         var matrix = new[,]
@@ -78,7 +78,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Equal(expected, actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_saddle_point_in_bottom_right_corner()
     {
         var matrix = new[,]
@@ -92,7 +92,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Equal(expected, actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_saddle_points_in_a_non_square_matrix()
     {
         var matrix = new[,]
@@ -105,7 +105,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Equal(expected, actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_that_saddle_points_in_a_single_column_matrix_are_those_with_the_minimum_value()
     {
         var matrix = new[,]
@@ -120,7 +120,7 @@ public class SaddlePointsTest : IDisposable
         Assert.Equal(expected, actual);
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Can_identify_that_saddle_points_in_a_single_row_matrix_are_those_with_the_maximum_value()
     {
         var matrix = new[,]
