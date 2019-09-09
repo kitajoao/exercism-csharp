@@ -14,7 +14,8 @@ public class SimpleLinkedList<T> : IEnumerable<T>
 
     public SimpleLinkedList(IEnumerable<T> values)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        
+        for;
     }
 
     public T Value 
@@ -49,16 +50,16 @@ public class SimpleLinkedList<T> : IEnumerable<T>
 
     public IEnumerator<T> GetEnumerator()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return this.GetEnumerator();
     }
 
     IEnumerator IEnumerable.GetEnumerator()
     {
-        int[] _values;
-        
-        foreach (var item in this.Next)
-        {
-            _values.GetValue();
-        };
+        var list = new List<T>();
+
+        list.Add(this.Value);
+        list.Add(this.Next.Value);
+
+        return list.GetEnumerator();
     }
 }
