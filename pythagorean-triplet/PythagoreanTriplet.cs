@@ -7,7 +7,6 @@ public static class PythagoreanTriplet
     {
         var answer = new List<(int, int, int)>();
 
-        bool sumOfSides = false;
 
         for (int ai = 1; ai < sum / 3; ai++)
         {
