@@ -33,8 +33,6 @@ public static class PerfectNumbers
             sumMCD = sumMCD + MCD[i];
         }
 
-        sumMCD = sumMCD;
-
         if (sumMCD == number)
         {
             return Classification.Perfect;
