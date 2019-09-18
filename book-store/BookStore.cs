@@ -79,36 +79,3 @@ public static class BookStore
         return (decimal)priceBooks;
     }
 }
-
-// public readonly static double[] priceBySize =
-// {
-//     0,
-//     8 * 1,
-//     8 * 2 * .95,
-//     8 * 3 * .9,
-//     8 * 4 * .8,
-//     8 * 5 * .75
-// };
-
-// public static decimal Total(IEnumerable<int> books)
-// {
-//     var pileOfBooks = new List<List<int>>();
-
-//     foreach (var book in books)
-//     {
-//         var availableBookPiles = pileOfBooks.Where(b => !b.Contains(book));
-
-//         var pile = availableBookPiles.FirstOrDefault(p => p.Count == 3)
-//         ?? availableBookPiles.FirstOrDefault()
-//         ?? new List<int>();
-
-//         if (pile.Count == 0)
-//         {
-//             pileOfBooks.Add(pile);
-//         }
-
-//         pile.Add(book);
-//     }
-//     return (decimal)pileOfBooks.Sum(p => priceBySize[p.Count]);
-
-// }
