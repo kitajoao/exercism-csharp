@@ -17,7 +17,6 @@ public static class BookStore
 
         var qtyOfBooks = books.Count();
 
-
         if (qtyOfBooks % 8 == 0 & grouped.Count() >= 4)
         {
             for (int i = 0; i < qtyOfBooks / 4; i++)
@@ -27,7 +26,6 @@ public static class BookStore
         }
         else
         {
-
             do
             {
                 inter = 0;
@@ -75,7 +73,6 @@ public static class BookStore
 
             } while (grouped.Count > 0);
         }
-
         return (decimal)priceBooks;
     }
 }
