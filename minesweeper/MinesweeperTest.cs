@@ -75,7 +75,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Mine_surrounded_by_spaces()
     {
         var minefield = new[]
@@ -93,7 +93,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Space_surrounded_by_mines()
     {
         var minefield = new[]
@@ -111,7 +111,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Horizontal_line()
     {
         var minefield = new[]
@@ -125,7 +125,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Horizontal_line_mines_at_edges()
     {
         var minefield = new[]
@@ -139,7 +139,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Vertical_line()
     {
         var minefield = new[]
@@ -161,7 +161,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Vertical_line_mines_at_edges()
     {
         var minefield = new[]
@@ -183,7 +183,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Cross()
     {
         var minefield = new[]
@@ -205,7 +205,7 @@ public class MinesweeperTest : IDisposable
         Assert.Equal(expected, Minesweeper.Annotate(minefield));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Large_minefield()
     {
         var minefield = new[]
