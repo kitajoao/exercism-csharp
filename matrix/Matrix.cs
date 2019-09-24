@@ -14,7 +14,7 @@ public class Matrix
 
         int numbRows = inputInStgArray.Length;
         int numbCols = inputInStgArray[0].Replace(" ", "").Length;
-
+        
         matrix = new int[numbRows, numbCols];
 
         for (int i = 0; i < inputInStgArray.Length; i++)
