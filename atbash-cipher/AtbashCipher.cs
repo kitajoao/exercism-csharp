@@ -33,7 +33,6 @@ public static class AtbashCipher
         Console.WriteLine(encodeResult);
         return encodeResult;
     }
-
     public static string Decode(string encodedValue)
     {
         int count = 0;
