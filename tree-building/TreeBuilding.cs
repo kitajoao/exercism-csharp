@@ -20,11 +20,8 @@ public static class TreeBuilder
 {
     public static Tree BuildTree(IEnumerable<TreeBuildingRecord> records)
     {
-        // records =
-
         var trees = records.OrderBy(e => e.RecordId)
                            .Select(r => new Tree { Id = r.RecordId, ParentId = r.ParentId }).ToArray();
-
 
         if (trees.Length == 0)
         {
