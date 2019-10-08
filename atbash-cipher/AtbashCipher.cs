@@ -35,7 +35,6 @@ public static class AtbashCipher
     }
     public static string Decode(string encodedValue)
     {
-        int count = 0;
         encodedValue = encodedValue.ToLowerInvariant().Replace(" ", "")
                                    .Replace(",", "").Replace(".", "");
 
