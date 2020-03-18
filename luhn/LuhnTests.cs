@@ -84,13 +84,13 @@ public class LuhnTests  : IDisposable
         Assert.False(Luhn.IsValid("059a"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Valid_strings_with_punctuation_included_become_invalid()
     {
         Assert.False(Luhn.IsValid("055-444-285"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Valid_strings_with_symbols_included_become_invalid()
     {
         Assert.False(Luhn.IsValid("055# 444$ 285"));
@@ -120,7 +120,7 @@ public class LuhnTests  : IDisposable
         Assert.False(Luhn.IsValid("055b 444 285"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Using_ascii_value_for_doubled_non_digit_isnt_allowed()
     {
         Assert.False(Luhn.IsValid(":9"));

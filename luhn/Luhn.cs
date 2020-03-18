@@ -8,74 +8,65 @@ public static class Luhn
 {
     public static bool IsValid(string number)
     {
-        //reverse array
-        char[] convStep = number.Where(c => !Char.IsLetter(c)).ToArray();
-        Array.Reverse(convStep);
-        var treatedStg = new string(convStep).Replace(" ", "");
-        
-        string onlyNumb = @"\d";
 
+        //reverse array
+        // char[] convStep = number.Where(c => !Char.IsLetter(c)).ToArray();
+        // Array.Reverse(convStep);
+        // var treatedStg = new string(convStep).Replace(" ", "");
+
+        //verify only numbers
         StringBuilder stgWithOnlyNumb = new StringBuilder();
-        
-        foreach (Match m in Regex.Matches(treatedStg, onlyNumb))
+        string onlyNumb = @"\d";
+        var stepNumb = new string(number).Replace(" ", "");
+
+        //create a string with only numbers
+        foreach (Match m in Regex.Matches(stepNumb, onlyNumb))
         {
             stgWithOnlyNumb.Append(m);
         }
-        Console.WriteLine($"stgWithOnlyNumb: {stgWithOnlyNumb}, treatedStg: {treatedStg}");
 
+        StringBuilder convStep = new StringBuilder();
+        for (int i = stgWithOnlyNumb.Length - 1; i >= 0; i--)
+        {
+            Console.WriteLine($"step string: {stgWithOnlyNumb[i]}");
+            convStep.Append(stgWithOnlyNumb[i]);
+        }
+        string treatedStg = convStep.ToString();
 
+        //verify conditions of the string (special char, letters, low size)
+        // Console.WriteLine($" treatedStg is: {treatedStg}.");
         if (treatedStg.Length < 2)
         {
             return false;
         }
-        if (stgWithOnlyNumb.Length != treatedStg.Length)
+        if (stgWithOnlyNumb.Length != stepNumb.Length)
         {
             return false;
         }
-
-        // convert string in int
-        long numbInInt = Convert.ToInt64(treatedStg);
-        long lengthOfString = treatedStg.Length - 1;
-
-        long tenPow = (long)Math.Pow(10, lengthOfString);
-
-        int count = 1;
-        long numbSum = 0;
-        for (int i = 0; i < number.Length; i++)
+    
+        var numbSum = 0;
+        for (int i = 0; i < treatedStg.Length; i++)
         {
-            Console.WriteLine($"The tenPow is {tenPow}");
-            if (tenPow == 0)
+            // Console.WriteLine($"char in position {i} is equal to {stgWithOnlyNumb[i]}");
+            var itNumb = Convert.ToInt32(new string(treatedStg[i], 1));
+
+            Console.WriteLine($"itNumb is equal to {itNumb}");
+            
+            if ((i + 1) % 2 == 0)
             {
-                break;
-            }
+                itNumb = itNumb *2;
 
-            if (count % 2 == 0)
-            {
-                var it = numbInInt / tenPow;
-
-
-                it = it * 2;
-                if (it > 9)
+            Console.WriteLine($"itNumb is equal to {itNumb}");
+                if(itNumb > 9)
                 {
-                    it = 1 + it - 10;
+                    itNumb = 1 + itNumb - 10;
                 }
-
-                numbSum += it;
             }
-            else
-            {
-                numbSum += numbInInt / tenPow;
-            }
+            
+            
+            numbSum += itNumb;
+            // Console.WriteLine($"numbSum is equal to {numbSum}");
 
-            numbInInt = numbInInt % tenPow;
-
-
-            if (tenPow > 0)
-            {
-
-                tenPow = tenPow / 10;
-            }
-            count++;
         }
 
         if (numbSum % 10 == 0)
@@ -143,7 +134,7 @@ public static class Luhn
 //                 if (count % 2 == 0)
 //                 {
 //                     var it = numbInInt / tenPow;
-                
+
 
 //                     it = it * 2;
 //                     if (it > 9)
