@@ -9,7 +9,7 @@ public static class Luhn
     public static bool IsValid(string number)
     {
 
-        
+
 
         //verify only numbers
         StringBuilder stgWithOnlyNumb = new StringBuilder();
@@ -22,6 +22,7 @@ public static class Luhn
             stgWithOnlyNumb.Append(m);
         }
 
+        //reverse the string
         StringBuilder convStep = new StringBuilder();
         for (int i = stgWithOnlyNumb.Length - 1; i >= 0; i--)
         {
@@ -30,7 +31,6 @@ public static class Luhn
         string treatedStg = convStep.ToString();
 
         //verify conditions of the string (special char, letters, low size)
-       
         if (treatedStg.Length < 2)
         {
             return false;
@@ -39,7 +39,7 @@ public static class Luhn
         {
             return false;
         }
-    
+
         // start doing the validations of the Luhn
         var numbSum = 0;
         for (int i = 0; i < treatedStg.Length; i++)
@@ -48,14 +48,14 @@ public static class Luhn
 
             if ((i + 1) % 2 == 0)
             {
-                itNumb = itNumb *2;
+                itNumb = itNumb * 2;
 
-                if(itNumb > 9)
+                if (itNumb > 9)
                 {
                     itNumb = 1 + itNumb - 10;
                 }
             }
-            
+
             numbSum += itNumb;
 
         }
