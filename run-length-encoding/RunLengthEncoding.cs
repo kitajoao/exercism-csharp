@@ -38,7 +38,12 @@ public static class RunLengthEncoding
                 if (count == 1)
                 {
                     encodedString += input[i];
-
+                    
+                    //validate only one letter
+                    if (i == input.Length - 2)
+                    {
+                        encodedString += input[i + 1];
+                    }
                 }
                 else if (count > 1)
                 {
