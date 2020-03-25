@@ -1,28 +1,41 @@
 // This file was auto-generated based on version 1.1.0 of the canonical data.
+//dotnet add package XunitLogger --version 2.4.0
 
+using System;
 using Xunit;
+using Xunit.Abstractions;
 
-public class RunLengthEncodingTests
+public class RunLengthEncodingTests  : IDisposable
 {
+    public RunLengthEncodingTests(ITestOutputHelper testOutput)
+    {
+        XunitLogging.Register(testOutput);
+    }
+
+    public void Dispose()
+    {
+        XunitLogging.Flush();
+    }
+
     [Fact]
     public void Run_length_encode_a_string_empty_string()
     {
         Assert.Equal("", RunLengthEncoding.Encode(""));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Run_length_encode_a_string_single_characters_only_are_encoded_without_count()
     {
         Assert.Equal("XYZ", RunLengthEncoding.Encode("XYZ"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Run_length_encode_a_string_string_with_no_single_characters()
     {
         Assert.Equal("2A3B4C", RunLengthEncoding.Encode("AABBBCCCC"));
     }
 
-    [Fact(Skip = "Remove to run test")]
+    [Fact]
     public void Run_length_encode_a_string_single_characters_mixed_with_repeated_characters()
     {
         Assert.Equal("12WB12W3B24WB", RunLengthEncoding.Encode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"));
@@ -33,7 +46,7 @@ public class RunLengthEncodingTests
     {
         Assert.Equal("2 hs2q q2w2 ", RunLengthEncoding.Encode("  hsqq qww  "));
     }
-
+ 
     [Fact(Skip = "Remove to run test")]
     public void Run_length_encode_a_string_lowercase_characters()
     {
