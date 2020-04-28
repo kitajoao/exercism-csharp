@@ -238,34 +238,3 @@ public static class YachtGame
 
     }
 }
-
-
-// for (int i = 0; i < dice.Length; i++)
-// {
-//     it = it - i;
-//     for (int j = 1; j < it; j++)
-//     {
-//         if (dice[i] == dice[j])
-//         {
-//             numbFound.Add(dice[i], dice[j]);
-//         }
-//     }
-// }
-
-// bool boolYatch = false;
-// if (dice[0] == dice[1] && dice[0] == dice[2] && dice[0] == dice[3] && dice[0] == dice[4]
-//     && dice[1] == dice[2] && dice[1] == dice[3] && dice[1] == dice[4]
-//     && dice[2] == dice[3] && dice[4] == dice[4])
-// {
-//     boolYatch = true;
-// }
-// if (boolYatch == true)
-// {
-//     return 50;
-// }
-// if (boolYatch == false)
-// {
-//     return 0;
-// }
-
-// return 100;
