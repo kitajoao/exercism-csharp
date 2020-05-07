@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 public class RailFenceCipher
@@ -31,24 +30,9 @@ public class RailFenceCipher
         }
         return eachRow.Aggregate("", (x, y) => x + y);
     }
-    public string Decode(string input)
-    {
-        var eachRowEnc = SplitEncodedString(input, _rails).ToArray();
-
-        Console.WriteLine(eachRowEnc[0]);
-
-
-
-
-        return "";
-    }
-
-
-    static IEnumerable<string> SplitEncodedString(string input, int rails)
-    {
-        return Enumerable.Range(0, input.Length / rails)
-            .Select(i => input.Substring(i * rails, rails));
-    }
-
+public string Decode(string input)
+{
+    throw new NotImplementedException("You need to implement this function.");
+}
 }
 
