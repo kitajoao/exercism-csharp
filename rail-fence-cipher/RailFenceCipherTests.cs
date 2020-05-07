@@ -1,9 +1,23 @@
 // This file was auto-generated based on version 1.1.0 of the canonical data.
 
-using Xunit;
+//dotnet add package XunitLogger --version 2.4.0
 
-public class RailFenceCipherTests
+using System.Collections.Generic;
+using System;
+using Xunit;
+using Xunit.Abstractions;
+
+public class RailFenceCipherTests :  IDisposable
 {
+    public RailFenceCipherTests(ITestOutputHelper testOutput)
+    {
+        XunitLogging.Register(testOutput);
+    }
+    public void Dispose()
+    {
+        XunitLogging.Flush();
+    }
+
     [Fact]
     public void Encode_with_two_rails()
     {
@@ -13,7 +27,7 @@ public class RailFenceCipherTests
         Assert.Equal(expected, sut.Encode(msg));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Encode_with_three_rails()
     {
         var msg = "WEAREDISCOVEREDFLEEATONCE";
@@ -22,7 +36,7 @@ public class RailFenceCipherTests
         Assert.Equal(expected, sut.Encode(msg));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Encode_with_ending_in_the_middle()
     {
         var msg = "EXERCISES";
@@ -31,7 +45,7 @@ public class RailFenceCipherTests
         Assert.Equal(expected, sut.Encode(msg));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Decode_with_three_rails()
     {
         var msg = "TEITELHDVLSNHDTISEIIEA";
