@@ -6,6 +6,17 @@ public static class Change
 {
     public static int[] FindFewestCoins(int[] coins, int target)
     {
+
+        //validate exceptions
+            if (target < 0)
+        {
+            throw new ArgumentException();
+        }
+        if (target > 0 && target < coins.Min())
+        {
+            throw new ArgumentException();
+        }
+
         List<int[]> coinsInList = new List<int[]>();
         var ListBase = coins;
         var it = (coins.Length - 1);
@@ -33,17 +44,12 @@ public static class Change
             // Console.WriteLine($"whatIsLeft - list[itLen] = {whatIsLeft - list[itLen]}");
             while (whatIsLeft > 0)
             {
-                Console.WriteLine($"whatIsLeft = {whatIsLeft}");
-                Console.WriteLine($"list[itLen] = {list[itLen]}");
+                // Console.WriteLine($"whatIsLeft = {whatIsLeft}");
+                // Console.WriteLine($"list[itLen] = {list[itLen]}");
                 if (whatIsLeft - list[itLen] >= 0)
                 {
                     curChangeComb.Add(list[itLen]);
                     whatIsLeft -= list[itLen];
-                }
-                else if (whatIsLeft < list[itLen])
-                {
-                    break;
-
                 }
                 else
                 {
