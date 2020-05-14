@@ -39,13 +39,8 @@ public static class Change
             var itLen = len - 1;
             var whatIsLeft = target;
 
-            // Console.WriteLine($"whatIsLeft = {whatIsLeft}");
-            // Console.WriteLine($"list[itLen] = {list[itLen]}");
-            // Console.WriteLine($"whatIsLeft - list[itLen] = {whatIsLeft - list[itLen]}");
             while (whatIsLeft > 0)
             {
-                // Console.WriteLine($"whatIsLeft = {whatIsLeft}");
-                // Console.WriteLine($"list[itLen] = {list[itLen]}");
                 if (whatIsLeft - list[itLen] >= 0)
                 {
                     curChangeComb.Add(list[itLen]);
