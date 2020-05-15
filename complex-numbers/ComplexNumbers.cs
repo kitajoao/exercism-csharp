@@ -2,52 +2,74 @@ using System;
 
 public struct ComplexNumber
 {
+
+    private double realPart;
+    private double imaginaryPart;
     public ComplexNumber(double real, double imaginary)
     {
+        realPart = real;
+        imaginaryPart = imaginary;
     }
-
     public double Real()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return realPart;
     }
-
     public double Imaginary()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return imaginaryPart;
     }
 
     public ComplexNumber Mul(ComplexNumber other)
     {
-        throw new NotImplementedException("You need to implement this function.");
-    }
 
+        var multReal = Real() * other.Real() - Imaginary() * other.Imaginary();
+        var multImag = Real() * other.Imaginary() + Imaginary() * other.Real();
+
+        return new ComplexNumber(multReal, multImag);
+    }
     public ComplexNumber Add(ComplexNumber other)
     {
-        throw new NotImplementedException("You need to implement this function.");
-    }
+        var addReal = Real() + other.Real();
+        var addImag = Imaginary() + other.Imaginary();
 
+        return new ComplexNumber(addReal, addImag);
+    }
     public ComplexNumber Sub(ComplexNumber other)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var subReal = Real() - other.Real();
+        var subImag = Imaginary() - other.Imaginary();
+
+        return new ComplexNumber(subReal, subImag);
     }
 
     public ComplexNumber Div(ComplexNumber other)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var divReal = ((Real()* other.Real() + Imaginary()*other.Imaginary()) / (Math.Pow(other.Real(),2) + Math.Pow(other.Imaginary(), 2)));
+        var divImag = ((Imaginary()* other.Real() - Real()*other.Imaginary()) / (Math.Pow(other.Real(),2) + Math.Pow(other.Imaginary(), 2)));
+
+        return new ComplexNumber(divReal, divImag);
     }
 
     public double Abs()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var squarePart = Math.Pow(Real(), 2) + Math.Pow(Imaginary(), 2);
+        var abs = Math.Pow(squarePart, 0.5);
+
+        return abs;
     }
 
     public ComplexNumber Conjugate()
     {
-        throw new NotImplementedException("You need to implement this function.");
+
+        return new ComplexNumber(Real(), -Imaginary());
     }
-    
+
     public ComplexNumber Exp()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        var exp = Math.Exp(Real());
+        var realExp = exp * Math.Cos(Imaginary());
+        var imagExp = exp * Math.Sin(Imaginary());
+        
+        return new ComplexNumber(realExp, imagExp);
     }
 }
