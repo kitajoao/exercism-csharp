@@ -69,7 +69,7 @@ public struct ComplexNumber
         var exp = Math.Exp(Real());
         var realExp = exp * Math.Cos(Imaginary());
         var imagExp = exp * Math.Sin(Imaginary());
-        
+    
         return new ComplexNumber(realExp, imagExp);
     }
 }
