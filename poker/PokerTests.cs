@@ -1,9 +1,20 @@
 // This file was auto-generated based on version 1.1.0 of the canonical data.
 
+//dotnet add package XunitLogger --version 2.4.0
+using System.Collections.Generic;
+using System;
 using Xunit;
-
-public class PokerTests
+using Xunit.Abstractions;
+public class PokerTests :  IDisposable
 {
+    public PokerTests(ITestOutputHelper testOutput)
+    {
+        XunitLogging.Register(testOutput);
+    }
+    public void Dispose()
+    {
+        XunitLogging.Flush();
+    }
     [Fact]
     public void Single_hand_always_wins()
     {
