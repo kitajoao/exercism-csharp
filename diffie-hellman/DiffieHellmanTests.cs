@@ -1,11 +1,24 @@
 // This file was auto-generated based on version 1.0.0 of the canonical data.
+//dotnet add package XunitLogger --version 2.4.0
 
 using System.Linq;
 using System.Numerics;
 using Xunit;
+using Xunit.Abstractions;
+using System;
 
-public class DiffieHellmanTests
+public class DiffieHellmanTests :  IDisposable
 {
+    public DiffieHellmanTests(ITestOutputHelper testOutput)
+    {
+        XunitLogging.Register(testOutput);
+    }
+
+    public void Dispose()
+    {
+        XunitLogging.Flush();
+    }
+
     [Fact]
     public void Private_key_is_in_range_1_p()
     {
@@ -17,7 +30,7 @@ public class DiffieHellmanTests
         }
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Private_key_is_random()
     {
         var p = new BigInteger(7919);
@@ -25,7 +38,7 @@ public class DiffieHellmanTests
         Assert.Equal(privateKeys.Distinct().Count(), privateKeys.Length);
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Can_calculate_public_key_using_private_key()
     {
         var p = new BigInteger(23);
@@ -34,7 +47,7 @@ public class DiffieHellmanTests
         Assert.Equal(new BigInteger(8), DiffieHellman.PublicKey(p, g, privateKey));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Can_calculate_secret_using_other_partys_public_key()
     {
         var p = new BigInteger(23);
@@ -43,7 +56,7 @@ public class DiffieHellmanTests
         Assert.Equal(new BigInteger(2), DiffieHellman.Secret(p, theirPublicKey, myPrivateKey));
     }
 
-    [Fact(Skip = "Remove this Skip property to run this test")]
+    [Fact]
     public void Key_exchange()
     {
         var p = new BigInteger(23);
