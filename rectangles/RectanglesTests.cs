@@ -2,9 +2,20 @@
 
 using System;
 using Xunit;
+using Xunit.Abstractions;
 
-public class RectanglesTests
+public class RectanglesTests :  IDisposable
 {
+    public RectanglesTests(ITestOutputHelper testOutput)
+    {
+        XunitLogging.Register(testOutput);
+    }
+
+    public void Dispose()
+    {
+        XunitLogging.Flush();
+    }
+
     [Fact]
     public void No_rows()
     {
